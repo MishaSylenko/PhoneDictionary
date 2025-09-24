@@ -13,6 +13,11 @@ bool anotherVersion = true;
 
 var (cmp, eq) = PersonComparers.Get(anotherVersion);
 
+people.Sort();
+Console.WriteLine("Sorted by Id:");
+people.ForEach(Console.WriteLine);
+Console.WriteLine(" ");
+
 people.Sort(cmp);
 Console.WriteLine("Sorted by Id:");
 people.ForEach(Console.WriteLine);
