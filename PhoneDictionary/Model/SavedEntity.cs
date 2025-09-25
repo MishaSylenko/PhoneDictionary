@@ -1,6 +1,6 @@
 ﻿namespace PhoneDictionary.Model;
 
-public class SavedEntity
+public class SavedEntity : IEquatable<SavedEntity>
 {
     public string FirstName { get; private init; }
 
@@ -40,15 +40,21 @@ public class SavedEntity
     
     public override bool Equals(object? obj)
     {
-        if (obj is SavedEntity entity)
-            return FirstName.Equals(entity.FirstName, StringComparison.OrdinalIgnoreCase)
-                   && LastName.Equals(entity.LastName, StringComparison.OrdinalIgnoreCase);
-        return false;
+        if (obj is null) return false;
+        if (ReferenceEquals(this, obj)) return true;
+        if (obj.GetType() != GetType()) return false;
+        return Equals((SavedEntity)obj);
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(FirstName.ToLower(), LastName.ToLower());
+        return HashCode.Combine(_phoneNumbers, FirstName, LastName, Address);
     }
 
+    public bool Equals(SavedEntity? other)
+    {
+        if (other is null) return false;
+        if (ReferenceEquals(this, other)) return true;
+        return FirstName == other.FirstName && LastName == other.LastName;
+    }
 }

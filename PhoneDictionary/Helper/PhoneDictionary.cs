@@ -4,7 +4,7 @@ namespace PhoneDictionary.Helper;
 
 public class PhoneDictionary
 {
-    private readonly Dictionary<string, HashSet<SavedEntity>> _phoneDictionary = [];
+    private readonly CustomDictionary<string, HashSet<SavedEntity>> _phoneDictionary = new(100);
     
     private static string GetKey(string firstName, string lastName) =>
         $"{firstName.Trim().ToLower()} {lastName.Trim().ToLower()}";
