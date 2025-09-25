@@ -5,10 +5,17 @@ namespace PhoneDictionary.Helper;
 
 public class CustomDictionary<TKey, TValue> : IDictionary<TKey, TValue>
 {
-    public int Count { get; }
-    public bool IsReadOnly { get; }
-    public ICollection<TKey> Keys { get; }
-    public ICollection<TValue> Values { get; }
+    private const int Capacity = 16;
+    public float LoadFactor = 0.75f;
+    
+    private TKey[] _keys;
+    private TValue[] _values;
+    
+    public CustomDictionary(int capacity = Capacity)
+    {
+        _keys = new TKey[capacity];
+        _values = new TValue[capacity];
+    }
     public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
     {
         throw new NotImplementedException();
@@ -44,7 +51,8 @@ public class CustomDictionary<TKey, TValue> : IDictionary<TKey, TValue>
         throw new NotImplementedException();
     }
 
-
+    public int Count { get; }
+    public bool IsReadOnly { get; }
     public void Add(TKey key, TValue value)
     {
         throw new NotImplementedException();
@@ -71,5 +79,6 @@ public class CustomDictionary<TKey, TValue> : IDictionary<TKey, TValue>
         set => throw new NotImplementedException();
     }
 
-
+    public ICollection<TKey> Keys { get; }
+    public ICollection<TValue> Values { get; }
 }

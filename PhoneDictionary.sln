@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneDictionary", "PhoneDic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Task2\Task2.csproj", "{A55C6072-3A54-4136-8F6A-98B101FF3DE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyList", "MyList\MyList.csproj", "{7C67C7DE-4B25-4477-AB7E-D06956494BA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A55C6072-3A54-4136-8F6A-98B101FF3DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A55C6072-3A54-4136-8F6A-98B101FF3DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A55C6072-3A54-4136-8F6A-98B101FF3DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C67C7DE-4B25-4477-AB7E-D06956494BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C67C7DE-4B25-4477-AB7E-D06956494BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C67C7DE-4B25-4477-AB7E-D06956494BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C67C7DE-4B25-4477-AB7E-D06956494BA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
